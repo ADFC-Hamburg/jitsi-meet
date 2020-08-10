@@ -40,23 +40,49 @@ class UnsupportedDesktopBrowser extends Component<Props> {
      */
     render() {
         return (
-            <div className = { _SNS }>
-                <h2 className = { `${_SNS}__title` }>
-                    It looks like you're using a browser we don't support.
-                </h2>
-                <p className = { `${_SNS}__description` }>
-                    Please try again with the latest version of&nbsp;
-                    <a
-                        className = { `${_SNS}__link` }
-                        href = { CHROME } >Chrome</a>&nbsp;
-                    {
-                        this._showFirefox() && <>and <a
-                            className = { `${_SNS}__link` }
-                            href = { FIREFOX }>Firefox</a></>
-                    }
-                </p>
-            </div>
-        );
+            <div class = 'unsupported-desktop-browser'>
+            <h2 class = 'unsupported-desktop-browser__title'>
+                Nicht unterstützter Browser
+            </h2>
+            <p class ='unsupported-desktop-browser__description'>
+                ADFC Meet unterstützt Ihren verwendeten Browser leider nicht. 
+                Dies betrifft alte Versionen des Internet-Explorers oder auch den
+                weit verbreiteten Firefox, der leider einige Fehler enthält, die die
+                Sprach- und Videoqualität für alle Teilnehmer*innen negativ beeinflusst.
+                Auch vom Safari-Browser werden Probleme berichtet.
+            </p>
+            <p class ='unsupported-desktop-browser__description'>
+                Wir empfehlen die Nutzung eines Chromium-basierten Browsers wie 
+                <a
+                    className = 'unsupported-desktop-browser__link'
+                    href = 'https://www.google.com/chrome/' >Chrome</a>, 
+                <a
+                    class = 'unsupported-desktop-browser__link'
+                    href = 'https://www.chromium.org/'>Chromium</a>, 
+                <a
+                    class = 'unsupported-desktop-browser__link'
+                    href = 'https://www.opera.com/de/download'>Opera</a> oder den neuen 
+                <a
+                    class = 'unsupported-desktop-browser__link'
+                    href = 'https://www.microsoft.com/de-de/edge'>Edge</a>.
+            </p>
+            <p class ='unsupported-desktop-browser__description'>
+                Außerdem können Sie ADFC Meet mit dem 
+                <a
+                    class = 'unsupported-desktop-browser__link'
+                    href = 'https://github.com/jitsi/jitsi-meet-electron#installation'>jitsi-Electron-Client</a>
+                unter Windows, Linux oder Mac OS nutzen.
+                Die Programmdatei muss nur heruntergeladen und
+                ausgeführt werden. Es ist keine besondere Installation erforderlich.
+            </p>
+            <p class ='unsupported-desktop-browser__description'>
+                Für mobile Apple- oder Android-Geräte stehen Ihnen <a
+                    class = 'unsupported-desktop-browser__link'
+                    href = 'https://jitsi.org/downloads/'>Apps</a>
+                im itunes-Store, Google Play oder F-Droid zur Verfügung.
+            </p>            
+        </div>
+            );
     }
 
     /**

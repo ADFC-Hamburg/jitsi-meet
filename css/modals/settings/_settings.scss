@@ -16,7 +16,7 @@
     }
 
     .mock-atlaskit-label {
-        color: #56637A;
+        color: $ADFC-blue  !important;
         font-size: 12px;
         font-weight: 600;
         line-height: 1.33;
@@ -58,4 +58,45 @@
     .sign-out-cta {
         margin-bottom: 20px;
     }
+
+    .language-settings {
+        display:none;
+    }
+
+    .eoRGoR {
+        background-color: $ADFC-lightGrey !important;
+        border-radius: 3px;
+        box-shadow: 0 0 0 1px rgba(115,115,115,0.08),0 2px 1px rgba(115,115,155,0.08), 0 0 20px -6px rgba(115,115,115,0.31) !important;
+        color: $ADFC-color !important;
+    }
+    
+
+    input[type="checkbox"] {
+        
+    }
+
+    label.iVWXDg {
+        color: $ADFC-blue !important;
+    }
+
+    .eoRGoR {
+        color: $ADFC-blue !important;
+    }
+
+    label.iVWXDg span.bzvfYd {
+        
+        span.daPWMQ, .hFknvi > svg {
+            fill: $ADFC-orange  !important;
+            color: lighten( $ADFC-blue, 10% ) !important;
+            background-color: $ADFC-blue !important;
+        }
+
+        span.fWoEvM, .jkUDCC > svg {
+            fill: $ADFC-orange !important;
+            background-color: $ADFC-lightGrey !important;
+        }
+    
+    }
+   
+
 }
