@@ -33,6 +33,9 @@ var config = {
     // Websocket URL
     // websocket: 'wss://meet.adfc-intern.de/xmpp-websocket',
 
+    // Websocket URL
+    // websocket: 'wss://jitsi-meet.example.com/xmpp-websocket',
+
     // The name of client node advertised in XEP-0115 'c' stanza
     clientNode: 'http://meet.adfc-intern.de/jitsimeet',
 
@@ -75,6 +78,18 @@ var config = {
 
     // Disable measuring of audio levels.
     // disableAudioLevels: false,
+    // audioLevelsInterval: 200,
+
+    // Enabling this will run the lib-jitsi-meet no audio detection module which
+    // will notify the user if the current selected microphone has no audio
+    // input and will suggest another valid device if one is present.
+    enableNoAudioDetection: true,
+
+    // Enabling this will run the lib-jitsi-meet noise detection module which will
+    // notify the user if there is noise, other than voice, coming from the current
+    // selected microphone. The purpose it to let the user know that the input could
+    // be potentially unpleasant for other meeting participants.
+    enableNoisyMicDetection: true,
 
     // Start the conference in audio only mode (no video is being received nor
     // sent).
@@ -298,6 +313,9 @@ var config = {
     // estimation tests.
     // gatherStats: false,
 
+    // The interval at which PeerConnection.getStats() is called. Defaults to 10000
+    // pcStatsInterval: 10000,
+
     // To enable sending statistics to callstats.io you must provide the
     // Application ID and Secret.
     // callStatsID: '',
@@ -335,9 +353,7 @@ var config = {
 
         // The STUN servers that will be used in the peer to peer connections
         stunServers: [
-
             { urls: 'meet.adfc-intern.de:4446' }
-
         ],
 
         // Sets the ICE transport policy for the p2p connection. At the time
@@ -386,6 +402,20 @@ var config = {
         // region: "europe",
         // userRegion: "asia"
     }
+
+    // Information for the chrome extension banner
+    // chromeExtensionBanner: {
+    //     // The chrome extension to be installed address
+    //     url: 'https://chrome.google.com/webstore/detail/jitsi-meetings/kglhbbefdnlheedjiejgomgmfplipfeb',
+
+    //     // Extensions info which allows checking if they are installed or not
+    //     chromeExtensionsInfo: [
+    //         {
+    //             id: 'kglhbbefdnlheedjiejgomgmfplipfeb',
+    //             path: 'jitsi-logo-48x48.png'
+    //         }
+    //     ]
+    // }
 
     // Local Recording
     //

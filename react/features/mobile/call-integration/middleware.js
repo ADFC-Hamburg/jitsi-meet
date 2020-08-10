@@ -186,13 +186,23 @@ function _conferenceJoined({ getState }, next, action) {
     const { callUUID } = action.conference;
 
     if (callUUID) {
-        CallIntegration.reportConnectedOutgoingCall(callUUID).then(() => {
-            // iOS 13 doesn't like the mute state to be false before the call is started
-            // so we update it here in case the user selected startWithAudioMuted.
-            if (Platform.OS === 'ios') {
-                _updateCallIntegrationMuted(action.conference, getState());
-            }
-        });
+        CallIntegration.reportConnectedOutgoingCall(callUUID)
+            .then(() => {
+                // iOS 13 doesn't like the mute state to be false before the call is started
+                // so we update it here in case the user selected startWithAudioMuted.
+                if (Platform.OS === 'ios') {
+                    _updateCallIntegrationMuted(action.conference, getState());
+                }
+            })
+            .catch(() => {
+                // Currently errors here are only emitted by Android.
+                //
+                // Some Samsung devices will fail to fully engage ConnectionService if no SIM card
+                // was ever installed on the device. We could check for it, but it would require
+                // the CALL_PHONE permission, which is not something we want to do, so fallback to
+                // not using ConnectionService.
+                _handleConnectionServiceFailure(getState());
+            });
     }
 
     return result;
@@ -292,22 +302,45 @@ function _conferenceWillJoin({ dispatch, getState }, next, action) {
                         { text: 'OK' }
                     ],
                     { cancelable: false });
-            } else if (error.code === 'SECURITY_ERROR') {
+            } else {
                 // Some devices fail because the CALL_PHONE permission is not granted, which is
-                // nonsense, because it's not needed for self-managed connections. Alas, this also
-                // means audio device management would be broken, so fallback to not using ConnectionService.
-                // NOTE: We are not storing this in Settings, in case it's a transient issue, as far fetched as
-                // that may be.
-                if (AudioMode.setUseConnectionService) {
-                    AudioMode.setUseConnectionService(false);
+                // nonsense, because it's not needed for self-managed connections.
+                // Some other devices fail because ConnectionService is not supported.
+                // Be that as it may, fallback to non-ConnectionService audio device handling.
 
-                    // Set the desired audio mode, since we just reset the whole thing.
-                    AudioMode.setMode(hasVideo ? AudioMode.VIDEO_CALL : AudioMode.AUDIO_CALL);
-                }
+                _handleConnectionServiceFailure(state);
             }
         });
 
     return result;
+}
+
+/**
+ * Handles a ConnectionService fatal error by falling back to non-ConnectionService device management.
+ *
+ * @param {Object} state - Redux store.
+ * @returns {void}
+ */
+function _handleConnectionServiceFailure(state: Object) {
+    const conference = getCurrentConference(state);
+
+    if (conference) {
+        // We're not tracking the call anymore.
+        delete conference.callUUID;
+
+        // ConnectionService has fatally failed. Alas, this also means audio device management would be broken, so
+        // fallback to not using ConnectionService.
+        // NOTE: We are not storing this in Settings, in case it's a transient issue, as far fetched as
+        // that may be.
+        if (AudioMode.setUseConnectionService) {
+            AudioMode.setUseConnectionService(false);
+
+            const hasVideo = !isVideoMutedByAudioOnly(state);
+
+            // Set the desired audio mode, since we just reset the whole thing.
+            AudioMode.setMode(hasVideo ? AudioMode.VIDEO_CALL : AudioMode.AUDIO_CALL);
+        }
+    }
 }
 
 /**

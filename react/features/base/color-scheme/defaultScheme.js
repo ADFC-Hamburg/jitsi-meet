@@ -10,6 +10,7 @@ export default {
         // Generic app theme colors that are used accross the entire app.
         // All scheme definitions below inherit these values.
         background: ColorPalette.white,
+        errorText: ColorPalette.red,
         icon: ColorPalette.AdfcTextColor,
         text: ColorPalette.AdfcTextColor
     },
