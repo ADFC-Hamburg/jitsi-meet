@@ -26,7 +26,7 @@
             @mixin sliderTrackStyles() {
                 height: 15px;
                 border-radius: 10px;
-                background: rgb(14, 22, 36);
+                background: $ADFC-darkGrey;
             }
 
             &::-ms-track {
@@ -69,11 +69,12 @@
             position: relative;
             width: 90%;
         }
-
+        
         .video-quality-dialog-label-container {
             position: absolute;
             text-align: center;
             transform: translate(-50%, 0%);
+            color: $ADFC-blue;
 
             &::before {
                 content: '';

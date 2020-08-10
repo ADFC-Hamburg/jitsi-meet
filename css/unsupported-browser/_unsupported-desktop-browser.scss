@@ -4,11 +4,13 @@
     display: block;
     text-align: center;
 
+    color: $unsupportedBrowserTitleColor;
+
     &__title {
         color: $unsupportedBrowserTitleColor;
-        font-weight: 300;
         font-size: $unsupportedBrowserTitleFontSize;
         letter-spacing: 1px;
+        text-align: center;
     }
 
     &__description {
@@ -34,6 +36,20 @@
             text-decoration: none;
 
             @include transition(color .1s ease-in);
+        }
+    }
+}
+
+.tOoji .unsupported-desktop-browser {
+    h2 {
+        color: white;
+    }
+
+    a.unsupported-desktop-browser__link {
+        color: $linkFontColor;
+
+        &:hover {
+            color: linkHoverFontColor;
         }
     }
 }

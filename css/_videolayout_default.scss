@@ -2,6 +2,10 @@
     min-height: 100%;
 }
 
+#videoconference_page .leftwatermark {
+    background-image: url($altWatermarkLink);
+}
+
 #videospace {
     display: block;
     height: 100%;
@@ -533,6 +537,9 @@
         height: 100%;
         object-fit: cover;
         width: 100%;
+        top: 0px;
+        left: 0px;
+        position: absolute;
     }
 }
 
@@ -555,6 +562,9 @@
 }
 
 .sharedVideoAvatar {
+    position: absolute;
+    left: 0px;
+    top: 0px;
     height: 100%;
     width: 100%;
     object-fit: cover;

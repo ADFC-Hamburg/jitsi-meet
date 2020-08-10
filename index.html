@@ -13,7 +13,8 @@
         // IE11 and earlier can be identified via their user agent and be
         // redirected to a page that is known to have no newer js syntax.
         if (window.navigator.userAgent.match(/(MSIE|Trident)/)) {
-            window.location.href = "static/recommendedBrowsers.html";
+            var roomName = encodeURIComponent(window.location.pathname);
+            window.location.href = "static/recommendedBrowsers.html" + "?room=" + roomName;
         }
 
         window.indexLoadedTime = window.performance.now();
@@ -153,7 +154,29 @@
     <!--#include virtual="static/settingsToolbarAdditionalContent.html" -->
   </head>
   <body>
-    <!--#include virtual="body.html" -->
-    <div id="react"></div>
+    <header>
+        <section class="section-header">
+            <div class="sectioncontainer">
+                <h4>ADFC Meet - Das Onlinekonferenzsystem vom ADFC</h4>
+            </div>
+        </section>        
+    </header>
+
+    <main>
+        <div id="react"></div>
+    </main>
+
+    <footer>
+        <section class="section-footer">
+            <div class="sectioncontainer">
+                <ul>
+                    <li>ADFC Meet wird vom ADFC Hamburg auf eigenen Servern datenschutzkonform betrieben.</li>
+                    <li><a href="https://hamburg.adfc.de/impressum/" target="_blank">Impressum &gt;</a></li>
+                    <li><a href="https://hamburg.adfc.de/datenschutzhinweise/" target="_blank">Datenschutz &gt;</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+
   </body>
 </html>
