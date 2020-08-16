@@ -100,11 +100,43 @@ body.welcome-page {
                     }
                 }
 
+                .insecure-room-name-warning {
+                    align-items: center;
+                    color: $defaultWarningColor;
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 5px;
+
+                    .jitsi-icon {
+                        margin-right: 15px;
+
+                        svg {
+                            fill: $defaultWarningColor
+                        }
+                    }
+                }
+
                 ::placeholder {
                     color: lighten( $ADFC-color, 30% );
                 }
             }
 
+        }
+
+        #moderated-meetings {
+            max-width: calc(100% - 40px);
+            padding: 16px 0 39px 0;
+            width: $welcomePageEnterRoomWidth;
+
+            p {
+                color: $welcomePageDescriptionColor;
+                text-align: left;
+
+                a {
+                    color: inherit;
+                    font-weight: 600;
+                }
+            }
         }
 
         .tab-container {

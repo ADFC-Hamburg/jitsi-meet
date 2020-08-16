@@ -37,6 +37,7 @@ $presence-idle: rgb(172, 172, 172);
 /**
  * Toolbar
  */
+
 $defaultToolbarSize: 50px;
 $newToolbarBackgroundColor: darken( $ADFC-blue, 50% );
 $newToolbarButtonHoverColor: rgba(255, 255, 255, 0.15);
@@ -105,9 +106,11 @@ $sidebarWidth: 375px;
 $borderRadius: 4px;
 $defaultWatermarkLink: '../images/watermark.png';
 $altWatermarkLink: '../images/alt-watermark.png';
+
 $popoverMenuPadding: 13px;
 $happySoftwareBackground: transparent;
 $desktopAppDragBarHeight: 25px;
+$scrollHeight: 7px;
 
 /**
  * Z-indexes. TODO: Replace this by a function.
@@ -262,3 +265,13 @@ $deepLinkingMobileButtonFontWeight: bold;
 $deepLinkingMobileButtonFontSize: inherit;
 
 $primaryDeepLinkingMobileButtonBorderRadius: inherit;
+
+/**
+* Chrome extension banner variables.
+*/
+$chromeExtensionBannerDontShowAgainDisplay: flex;
+$chromeExtensionBannerHeight: 128px;
+$chromeExtensionBannerTop: 80px;
+$chromeExtensionBannerRight: 16px;
+$chromeExtensionBannerTopInMeeting: 10px;
+$chromeExtensionBannerRightInMeeeting: 10px;

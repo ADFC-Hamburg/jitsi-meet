@@ -10,6 +10,7 @@ export default {
         // Generic app theme colors that are used accross the entire app.
         // All scheme definitions below inherit these values.
         background: ColorPalette.white,
+        errorText: ColorPalette.red,
         icon: ColorPalette.AdfcTextColor,
         text: ColorPalette.AdfcTextColor
     },
@@ -21,6 +22,10 @@ export default {
         remoteMsgBackground: 'rgb(241, 242, 246)',
         replyBorder: ColorPalette.AdfcOrange,
         replyIcon: ColorPalette.AdfcOrange
+    },
+    'Conference': {
+        inviteButtonBackground: 'rgb(0, 119, 225)',
+        onVideoText: 'white'
     },
     'Dialog': {
         border: ColorPalette.AdfcBackgroundColor,
@@ -34,6 +39,7 @@ export default {
         statusBarContent: ColorPalette.white,
         text: ColorPalette.white
     },
+    'Modal': {},
     'LargeVideo': {
         background: 'rgb(42, 58, 75)'
     },
