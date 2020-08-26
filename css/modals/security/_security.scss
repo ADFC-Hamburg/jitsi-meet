@@ -1,8 +1,13 @@
 .security {
     &-dialog {
-        color: #fff;
+        color: $ADFC-color;
         font-size: 15px;
         line-height: 24px;
+        
+        .info-dialog-password{
+            margin-right: 5px;
+            max-width: 200px;
+        }
 
         &.password-section {
             display: flex;
@@ -23,11 +28,15 @@
                         cursor: pointer;
                         text-decoration: none;
                         font-size: 14px;
-                        color: #6FB1EA;
-                    }
-
-                    & > :first-child:not(:last-child) {	
-                        margin-right: 24px;	
+                        background: $ADFC-blue;
+                        border: 1px solid darken( $ADFC-blue, 20% );
+                        color: white;
+                        margin-right: 5px;
+                        padding: 5px;
+                        border-radius: 3px 3px 0 0;
+                        & > :first-child:not(:last-child) {	
+                            margin-right: 24px;	
+                        }
                     }
                 }
             }
@@ -44,10 +53,17 @@
                 display: none;
             }
         }
+
+        .info-password-input {
+            padding: 3px;
+            border:  1px solid darken( $ADFC-blue, 20% );
+            margin-right: 10px;
+        }
     }
 }
 
 .new-toolbox .toolbox-content .toolbox-icon.toggled.security-toolbar-button {
+    background: $ADFC-orange;
     border-width: 0;
 
     &:not(:hover) {

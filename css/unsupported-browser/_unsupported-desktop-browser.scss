@@ -37,3 +37,11 @@
         }
     }
 }
+
+.fUkahW a.unsupported-desktop-browser__link {
+    color: $linkFontColor;
+
+    &:hover {
+        color: $linkHoverFontColor;
+    }
+}

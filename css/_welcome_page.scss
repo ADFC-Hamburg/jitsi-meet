@@ -1,6 +1,12 @@
+
 body.welcome-page {
     background: inherit;
     overflow: auto;
+}
+
+
+div#react {
+    
 }
 
 .welcome {
@@ -61,7 +67,7 @@ body.welcome-page {
             max-width: calc(100% - 40px);
             width: $welcomePageEnterRoomWidth;
             z-index: $zindex2;
-            background-color: #fff;
+            background-color: $ADFC-lightGrey;
             padding: $welcomePageEnterRoomPadding;
             border-radius: $welcomePageEnterRoomBorderRadius;
 
@@ -69,7 +75,7 @@ body.welcome-page {
                 width: 100%;
                 padding: $welcomePageEnterRoomInputContainerPadding;
                 text-align: left;
-                color: #253858;
+                color: $ADFC-color;
                 height: fit-content;
 
                 .enter-room-title {
@@ -85,7 +91,7 @@ body.welcome-page {
                     border-image: $welcomePageEnterRoomInputContainerBorderImage;
                     display: inline-block;
                     width: 100%;
-                    font-size: 14px;
+                    font-size: 16px;
                 }
 
                 .insecure-room-name-warning {
@@ -105,7 +111,7 @@ body.welcome-page {
                 }
 
                 ::placeholder {
-                    color: #253858;
+                    color: lighten( $ADFC-color, 30% );
                 }
             }
 
@@ -133,7 +139,7 @@ body.welcome-page {
             text-align: left;
             min-height: 354px;
             width: 710px;
-            background: #75A7E7;
+            background: $ADFC-lightGrey;
             display: $welcomePageTabContainerDisplay;
             flex-direction: column;
 
@@ -143,6 +149,7 @@ body.welcome-page {
                 overflow: hidden;
                 flex-grow: 1;
                 position: relative;
+                background: $ADFC-lightGrey;
 
                 > * {
                     position: absolute;
@@ -157,6 +164,7 @@ body.welcome-page {
                 flex-direction: row;
                 min-height: 54px;
                 width: 100%;
+                background: $ADFC-grey;
 
                 .tab {
                     display: $welcomePageTabDisplay;
@@ -185,9 +193,9 @@ body.welcome-page {
         height: $welcomePageButtonHeight;
         font-size: $welcomePageButtonFontSize;
         font-weight: $welcomePageButtonFontWeight;
-        background: #0074E0;
+        background: $buttonBackground;
         border-radius: $welcomePageButtonBorderRadius;
-        color: #FFFFFF;
+        color: $buttonColor;
         text-align: center;
         vertical-align: middle;
         line-height: $welcomePageButtonLineHeight;
