@@ -12,6 +12,8 @@ STYLES_DESTINATION = css/all.css
 STYLES_MAIN = css/main.scss
 WEBPACK = ./node_modules/.bin/webpack
 WEBPACK_DEV_SERVER = ./node_modules/.bin/webpack-dev-server
+PREPROCESSHTML = ./preprocesshtml.pl
+HTML_DIR = $(DEPLOY_DIR)/html
 
 all: compile deploy clean
 
@@ -79,6 +81,11 @@ deploy-css:
 
 deploy-local:
 	([ ! -x deploy-local.sh ] || ./deploy-local.sh)
+
+dev-deploy-html:
+	rm -fr $(HTML_DIR)
+	mkdir -p $(HTML_DIR)
+	$(PREPROCESSHTML) index.html $(HTML_DIR)/index.html
 
 .NOTPARALLEL:
 dev: deploy-init deploy-css deploy-rnnoise-binary deploy-lib-jitsi-meet deploy-libflac

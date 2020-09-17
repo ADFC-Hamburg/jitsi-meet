@@ -25,7 +25,7 @@ export default {
     },
     'Conference': {
         inviteButtonBackground: 'rgb(0, 119, 225)',
-        onVideoText: 'white'
+        onVideoText: ColorPalette.white
     },
     'Dialog': {
         border: ColorPalette.AdfcBackgroundColor,
