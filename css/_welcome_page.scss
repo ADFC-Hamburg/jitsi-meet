@@ -1,6 +1,12 @@
+
 body.welcome-page {
     background: inherit;
     overflow: auto;
+}
+
+
+div#react {
+    
 }
 
 .welcome {
@@ -88,17 +94,6 @@ body.welcome-page {
                     font-size: 16px;
                 }
 
-                .insecure-room-name-warning {
-                    align-items: center;
-                    color: $defaultWarningColor;
-                    display: flex;
-                    flex-direction: row;
-                    margin-top: 5px;
-
-                    svg {
-                        fill: $defaultWarningColor
-                    }
-                }
 
                 .insecure-room-name-warning {
                     align-items: center;

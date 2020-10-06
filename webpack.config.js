@@ -321,4 +321,6 @@ function devServerProxyBypass({ path }) {
     if (path.startsWith('/libs/')) {
         return path;
     }
+
+console.log( 'proxy: ' + path );
 }

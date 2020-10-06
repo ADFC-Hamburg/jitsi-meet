@@ -27,11 +27,11 @@
     }
 
     &__link {
-        color: $linkFontColor;
+        color: $ADFC-orange;
         @include transition(color .1s ease-out);
 
         &:hover {
-            color: $linkHoverFontColor;
+            color: darken( $ADFC-orange, 10% );
             cursor: pointer;
             text-decoration: none;
 
@@ -40,16 +40,16 @@
     }
 }
 
-.tOoji .unsupported-desktop-browser {
+.fUkahW .unsupported-desktop-browser {
     h2 {
-        color: white;
+        color: $ADFC-blue;
     }
 
     a.unsupported-desktop-browser__link {
-        color: $linkFontColor;
+        color: $ADFC-orange;
 
         &:hover {
-            color: linkHoverFontColor;
+            color: darken( $ADFC-orange, 10% );
         }
     }
 }

@@ -145,7 +145,7 @@ footer {
     }
 
     a, a:hover {
-        color: $ADFC-orange;
+        color: $baseLight;
         padding-bottom: 0;
         font-size: 12px;
         text-decoration: none;
@@ -213,11 +213,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .jitsi-icon svg {
     fill: $ADFC-orange;
-}
-
-.jitsi-icon.gray svg {
-    fill: #5E6D7A;
-    cursor: pointer;
 }
 
 .jitsi-icon.gray svg {
