@@ -4,17 +4,17 @@
     display: block;
     text-align: center;
 
-    color: $unsupportedBrowserTitleColor;
+    color: $ADFC-blue;
 
     &__title {
-        color: $unsupportedBrowserTitleColor;
+        color: $ADFC-blue;
         font-size: $unsupportedBrowserTitleFontSize;
         letter-spacing: 1px;
         text-align: center;
     }
 
     &__description {
-        color: $unsupportedDesktopBrowserTextColor;
+        color: 'black';
         font-size: $unsupportedDesktopBrowserTextFontSize;
         font-weight: 300;
         letter-spacing: 1px;
