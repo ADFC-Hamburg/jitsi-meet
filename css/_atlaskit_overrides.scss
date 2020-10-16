@@ -108,21 +108,8 @@ button.iuZaWk {
     background-color: $buttonBackground !important;
 
     &:hover {
-        background-color: darken( $buttonBackground, 10% ) !important;
+        background-color: darken( $buttonColor, 10% ) !important;
     }
-}
-
-button.dhygeq {
-    color: $buttonColor !important;
-    background-color: darken( $buttonBackground, 10% ) !important;
-
-    &:hover {
-        background-color: darken( $buttonBackground, 10% ) !important;
-    }
-}
-
-h4.jUctfm {
-    color: $ADFC-blue;
 }
 
 /* Ok-Button */
@@ -151,26 +138,6 @@ button.cIYSWk {
     background: $buttonSecondaryHoverBackground !important;
 }
 
-button.gUwyVH {
-    color: $buttonSecondaryColor !important;
-    background: $buttonSecondaryBackground;
-}
-
-div.jsYMHu {
-    background-color: white;
-    color: $ADFC-blue;
-    border-color: darken( $ADFC-orange, 10% );
-}
-
-div.deuJGG {
-    border-color: darken( $ADFC-orange, 20% );
-}
-
-input.GVpqe {
-    background-color: white;
-    color: $ADFC-blue;
-    border-color: darken( $ADFC-orange, 10% );
-}
 
 .modal-dialog-form {
     /**
@@ -217,8 +184,4 @@ input.GVpqe {
         color: white;
         background: $ADFC-blue;
     }
-
-    .cliqcn .izxwZe, .modal-dialog-form .hRySvC, div.jsYMHu, h4.jUctfm, input.GVpqe {
-        color: $ADFC-blue;
-    }    
 }
