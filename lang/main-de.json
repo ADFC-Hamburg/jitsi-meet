@@ -160,6 +160,7 @@
         "accessibilityLabel": {
             "liveStreaming": "Livestream"
         },
+        "add": "Hinzufügen",
         "allow": "Erlauben",
         "alreadySharedVideoMsg": "Ein anderer Teilnehmer gibt bereits ein Video weiter. Bei dieser Konferenz ist jeweils nur ein geteiltes Video möglich.",
         "alreadySharedVideoTitle": "Nur ein geteiltes Video gleichzeitig",
