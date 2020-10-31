@@ -50,10 +50,6 @@
         font-size: 15px;
         line-height: 24px;
 
-        & > span {
-            font-weight: 600;
-        }
-
         &.header {
             display: flex;
             justify-content: space-between;
@@ -129,6 +125,7 @@
                 fill: $baseLight;
             }
         }
+
 
         &.separator {
             margin: 24px 0 24px -20px;
@@ -206,11 +203,11 @@
                     background-color: $ADFC-blue;
                     border-color: darken( $ADFC-blue, 20% );
                 }
-    
+
                 &:hover > div:hover {
                     background-color: lighten( $ADFC-blue, 10% );
                 }
-    
+
                 & > :not(:last-child) {
                     margin-right: 16px;
                 }
