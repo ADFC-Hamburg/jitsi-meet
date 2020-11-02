@@ -8,7 +8,7 @@
             justify-content: space-between;
             margin: 16px 16px 24px;
             width: calc(100% - 32px);
-            color: #fff;
+            color: $ADFC-blue;
             font-weight: 600;
             font-size: 24px;
             line-height: 32px;
@@ -31,7 +31,7 @@
     &-code {
         background: transparent;
         border: 1px solid #A4B8D1;
-        color: white;
+        color: $ADFC-darkGrey;
         font-size: 15px;
         height: 165px;
         line-height: 24px;
@@ -47,8 +47,9 @@
         margin-top: 24px;
         width: calc(100% - 24px);
         height: 24px;
-        background: #2A3A4B;
-        border: 1px solid #5E6D7A;
+        color: white;
+        background:$ADFC-blue;
+        border: 1px solid darken( $ADFC-blue, 20% );
         border-radius: 4px;
         cursor: pointer;
 
