@@ -190,10 +190,13 @@ class WelcomePage extends AbstractWelcomePage {
                         </h1>
                         <p className = 'header-text-description'>
                             Starte mit Deiner ADFC-Gliederung oder Deinem ADFC-Arbeitskreis eine Videokonferenz.
-                            Registrierte und angemeldete Moderator*innen starten die virtuelle Sitzung und
-                            laden die anderen Teilnehmer*innen ein.
+                            Moderator*innen starten die virtuelle Sitzung und laden die anderen Teilnehmer*innen ein.
                             Die Konferenz wird im Internet verschlüsselt übertragen.
                             Die Nutzung von ADFC Meet für Vereinszwecke des ADFC ist kostenlos.
+                        </p>
+                        <p className = 'header-text-description'>
+                            Die Dokumentation ist unter <a href="https://portal.adfc-intern.de/adfc/adfc-meet.pdf" target="_blank">portal.adfc-intern.de/adfc/adfc-meet.pdf</a> zu finden,<br />
+                            ein Feedbackformular unter <a href="https://www.adfc-nrw.de/jitsi-feedback/" target="_blank">www.adfc-nrw.de/jitsi-feedback/</a>.
                         </p>
                     </div>
                     <div id = 'enter_room'>
