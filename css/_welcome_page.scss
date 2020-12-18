@@ -59,6 +59,10 @@ div#react {
             line-height: $welcomePageHeaderTextDescriptionLineHeight;
             margin-bottom: $welcomePageHeaderTextDescriptionMarginBottom;
             align-self: $welcomePageHeaderTextDescriptionAlignSelf;
+
+            a {
+                color: $ADFC-orange;
+            }
         }
 
         #enter_room {
