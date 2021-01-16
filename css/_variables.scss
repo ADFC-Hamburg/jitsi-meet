@@ -198,6 +198,13 @@ $welcomePageHeaderTextTitleFontWeight: normal;
 $welcomePageHeaderTextTitleLineHeight: 50px;
 $welcomePageHeaderTextTitleOpacity: 1;
 
+$welcomePageHeaderTextDescriptionDisplay: block;
+$welcomePageHeaderTextDescriptionFontSize: 1rem;
+$welcomePageHeaderTextDescriptionFontWeight: 400;
+$welcomePageHeaderTextDescriptionLineHeight: 24px;
+$welcomePageHeaderTextDescriptionMarginBottom: 20px;
+$welcomePageHeaderTextDescriptionAlignSelf: inherit;
+
 $welcomePageEnterRoomDisplay: flex;
 $welcomePageEnterRoomWidth: calc(100% - 32px);
 $welcomePageEnterRoomPadding: 4px;

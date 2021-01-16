@@ -56,6 +56,18 @@ div#react {
             margin: 16px 0 32px 0;
             text-align: $welcomePageHeaderTextAlign;
 
+        .header-text-description {
+            display: $welcomePageHeaderTextDescriptionDisplay;
+            color: $welcomePageDescriptionColor;
+            font-size: $welcomePageHeaderTextDescriptionFontSize;
+            font-weight: $welcomePageHeaderTextDescriptionFontWeight;
+            line-height: $welcomePageHeaderTextDescriptionLineHeight;
+            margin-bottom: $welcomePageHeaderTextDescriptionMarginBottom;
+            align-self: $welcomePageHeaderTextDescriptionAlignSelf;
+
+            a {
+                color: $ADFC-orange;
+            }
         }
 
         #enter_room {
