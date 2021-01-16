@@ -231,18 +231,11 @@ div#react {
     }
 
     .welcome-page-button {
-        width: $welcomePageButtonWidth;
-        min-width: $welcomePageButtonMinWidth;
-        height: $welcomePageButtonHeight;
-        font-size: $welcomePageButtonFontSize;
-        font-weight: $welcomePageButtonFontWeight;
-        background: $buttonBackground;
-        border-radius: $welcomePageButtonBorderRadius;
-        color: $buttonColor;
-        text-align: center;
-        vertical-align: middle;
-        line-height: $welcomePageButtonLineHeight;
         border: 0;
+        font-size: 14px;
+        background: #0074E0;
+        border-radius: 3px;
+        color: #FFFFFF;
         cursor: pointer;
         padding: 16px 20px;
 
