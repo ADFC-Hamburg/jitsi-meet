@@ -28,15 +28,12 @@ body {
     overflow: hidden;
     color: $defaultColor;
     background: $defaultBackground;
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
 
     &.filmstrip-only {
         background: transparent;
     }
-=======
->>>>>>> 4628
 }
 
 header {
