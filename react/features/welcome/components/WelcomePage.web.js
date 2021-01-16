@@ -213,10 +213,29 @@ class WelcomePage extends AbstractWelcomePage {
                             ein Feedbackformular unter <a href="https://www.adfc-nrw.de/jitsi-feedback/" target="_blank">www.adfc-nrw.de/jitsi-feedback/</a>.
                         </p>
                         <div id = 'enter_room'>
-                        <div className = 'enter-room-input-container'>
-                            <div className = 'enter-room-title'>
-                                { t('welcomepage.enterRoomTitle') }
-                           </div>
+                            <div className = 'enter-room-input-container'>
+                                <form onSubmit = { this._onFormSubmit }>
+                                    <input
+                                        aria-disabled = 'false'
+                                        aria-label = 'Meeting name input'
+                                        autoFocus = { true }
+                                        className = 'enter-room-input'
+                                        id = 'enter_room_field'
+                                        onChange = { this._onRoomChange }
+                                        pattern = { ROOM_NAME_VALIDATE_PATTERN_STR }
+                                        placeholder = { this.state.roomPlaceholder }
+                                        ref = { this._setRoomInputRef }
+                                        title = { t('welcomepage.roomNameAllowedChars') }
+                                        type = 'text'
+                                        value = { this.state.room } />
+                                    <div
+                                        className = { _moderatedRoomServiceUrl
+                                            ? 'warning-with-link'
+                                            : 'warning-without-link' }>
+                                        { this._renderInsecureRoomNameWarning() }
+                                    </div>
+                                </form>
+                            </div>
                             <button
                                 aria-disabled = 'false'
                                 aria-label = 'Start meeting'
