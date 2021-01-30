@@ -36,7 +36,7 @@
 
     .meetings-list-empty-button {
         align-items: center;
-        color: #0163FF;
+        color: $ADFC-blue;
         cursor: pointer;
         display: flex;
         font-size: 14px;
@@ -156,7 +156,7 @@
         position: absolute;
 
         &> svg {
-            fill: #0074e0;
+            fill: $ADFC-blue;
         }
     }
 

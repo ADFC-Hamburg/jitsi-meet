@@ -12,6 +12,7 @@
     
             .joining-message {
                 margin: 10px;
+                color: white;
             }
         }
     }
@@ -39,8 +40,9 @@
 }
 
 #knocking-participant-list {
-    background-color: $newToolbarBackgroundColor;
-    border: 1px solid rgba(255, 255, 255, .4);
+    background-color: #FFC400;
+    border: 1px solid darken( #FFC400, 10%);
+    color: #253858;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -57,7 +59,7 @@
     }
 
     .title {
-        background-color: rgba(0, 0, 0, .2);
+/*        background-color: rgba(0, 0, 0, .2); */
         font-size: 1.2em;
         padding: 15px
     }
@@ -106,12 +108,12 @@
         }
 
         &.borderLess {
-            background-color: transparent;
+            background-color: $ADFC-orange;
             border-width: 0;
         }
 
         &.primary {
-            background-color: rgb(3, 118, 218);
+            background-color:$ADFC-blue;
             border-width: 0;
         }
     }

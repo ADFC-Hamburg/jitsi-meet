@@ -37,37 +37,44 @@ div#react {
             z-index: $zindex2;
         }
 
-        .header-text-title {
-            color: $welcomePageTitleColor;
-            font-size: $welcomePageHeaderTextTitleFontSize;
-            font-weight: $welcomePageHeaderTextTitleFontWeight;
-            line-height: $welcomePageHeaderTextTitleLineHeight;
-            margin-bottom: $welcomePageHeaderTextTitleMarginBottom;
-            max-width: $welcomePageHeaderTitleMaxWidth;
-            opacity: $welcomePageHeaderTextTitleOpacity;
-            text-align: $welcomePageHeaderTextAlign;
-        }
+        .header-text-box {
 
-        .header-text-subtitle {
-            color: #fff;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 26px;
-            margin: 16px 0 32px 0;
-            text-align: $welcomePageHeaderTextAlign;
-        }
+            background-color: rgba( 255,255,255, 0.7 );
 
-        .header-text-description {
-            display: $welcomePageHeaderTextDescriptionDisplay;
-            color: $welcomePageDescriptionColor;
-            font-size: $welcomePageHeaderTextDescriptionFontSize;
-            font-weight: $welcomePageHeaderTextDescriptionFontWeight;
-            line-height: $welcomePageHeaderTextDescriptionLineHeight;
-            margin-bottom: $welcomePageHeaderTextDescriptionMarginBottom;
-            align-self: $welcomePageHeaderTextDescriptionAlignSelf;
+            .header-text-title {
+                color: $welcomePageTitleColor;
+                font-size: $welcomePageHeaderTextTitleFontSize;
+                font-weight: $welcomePageHeaderTextTitleFontWeight;
+                line-height: $welcomePageHeaderTextTitleLineHeight;
+                margin-bottom: $welcomePageHeaderTextTitleMarginBottom;
+                max-width: $welcomePageHeaderTitleMaxWidth;
+                opacity: $welcomePageHeaderTextTitleOpacity;
+                text-align: $welcomePageHeaderTextAlign;
+            }
 
-            a {
-                color: $ADFC-orange;
+            .header-text-description {
+                display: $welcomePageHeaderTextDescriptionDisplay;
+                color: $welcomePageDescriptionColor;
+                font-size: $welcomePageHeaderTextDescriptionFontSize;
+                font-weight: $welcomePageHeaderTextDescriptionFontWeight;
+                line-height: $welcomePageHeaderTextDescriptionLineHeight;
+                margin-bottom: $welcomePageHeaderTextDescriptionMarginBottom;
+                align-self: $welcomePageHeaderTextDescriptionAlignSelf;
+                text-align: $welcomePageHeaderTextAlign;
+
+                a {
+                    color: $ADFC-orange;
+                }
+            }
+            .header-text-subtitle {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 26px;
+                margin: 16px 0 32px 0;
+                text-align: $welcomePageHeaderTextAlign;
+
+
             }
         }
 
@@ -183,7 +190,7 @@ div#react {
             display: $welcomePageTabButtonsDisplay;
 
             .tab {
-                background-color: #c7ddff;
+                background-color: $ADFC-lightGrey;
                 border-radius: 7px;
                 cursor: pointer;
                 display: $welcomePageTabDisplay;
@@ -233,9 +240,9 @@ div#react {
     .welcome-page-button {
         border: 0;
         font-size: 14px;
-        background: #0074E0;
+        background: buttonBackground;
         border-radius: 3px;
-        color: #FFFFFF;
+        color: $buttonColor;
         cursor: pointer;
         padding: 16px 20px;
 
@@ -303,7 +310,7 @@ div#react {
         }
 
         &--blue {
-            background: #D5E5FF;
+            background: $ADFC-orange;
         }
 
         &--grey {

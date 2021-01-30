@@ -199,19 +199,21 @@ class WelcomePage extends AbstractWelcomePage {
                     </div>
                     <div className = 'header-image' />
                     <div className = 'header-container'>
-                        <h1 className = 'header-text-title'>
-                            ADFC Meet - Das ADFC Onlinekonferenzsystem
-                        </h1>
-                        <span className = 'header-text-subtitle'>
-                            Starte mit Deiner ADFC-Gliederung oder Deinem ADFC-Arbeitskreis eine Videokonferenz.
-                            Moderator*innen starten die virtuelle Sitzung und laden die anderen Teilnehmer*innen ein.
-                            Die Konferenz wird im Internet verschlüsselt übertragen.
-                            Die Nutzung von ADFC Meet für Vereinszwecke des ADFC ist kostenlos.
-                        </span>
-                        <p className = 'header-text-description'>
-                            Die Dokumentation ist unter <a href="https://portal.adfc-intern.de/adfc/adfc-meet.pdf" target="_blank">portal.adfc-intern.de/adfc/adfc-meet.pdf</a> zu finden,<br />
-                            ein Feedbackformular unter <a href="https://www.adfc-nrw.de/jitsi-feedback/" target="_blank">www.adfc-nrw.de/jitsi-feedback/</a>.
-                        </p>
+                        <div className = 'header-text-box'>
+                            <h1 className = 'header-text-title'>
+                                ADFC Meet - Das ADFC Onlinekonferenzsystem
+                            </h1>
+                            <p className = 'header-text-description'>
+                                Starte mit Deiner ADFC-Gliederung oder Deinem ADFC-Arbeitskreis eine Videokonferenz.
+                                Moderator*innen starten die virtuelle Sitzung und laden die anderen Teilnehmer*innen ein.
+                                Die Konferenz wird im Internet verschlüsselt übertragen.
+                                Die Nutzung von ADFC Meet für Vereinszwecke des ADFC ist kostenlos.
+                            </p>
+                            <p className = 'header-text-description'>
+                                Die Dokumentation ist unter <a href="https://portal.adfc-intern.de/adfc/adfc-meet.pdf" target="_blank">portal.adfc-intern.de/adfc/adfc-meet.pdf</a> zu finden,
+                                ein Feedbackformular unter <a href="https://www.adfc-nrw.de/jitsi-feedback/" target="_blank">www.adfc-nrw.de/jitsi-feedback/</a>.
+                            </p>
+                        </div>
                         <div id = 'enter_room'>
                             <div className = 'enter-room-input-container'>
                                 <form onSubmit = { this._onFormSubmit }>
