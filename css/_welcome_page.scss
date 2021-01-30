@@ -6,7 +6,7 @@ body.welcome-page {
 
 
 div#react {
-    
+
 }
 
 .welcome {
@@ -74,6 +74,7 @@ div#react {
                 margin: 16px 0 32px 0;
                 text-align: $welcomePageHeaderTextAlign;
 
+
             }
         }
 
@@ -102,7 +103,7 @@ div#react {
                     display: inline-block;
                     height: 50px;
                     width: 100%;
-                    font-size: 14px;
+                    font-size: 16px;
                     padding-left: 10px;
 
                     &:focus {
@@ -194,6 +195,8 @@ div#react {
                 cursor: pointer;
                 display: $welcomePageTabDisplay;
                 flex-grow: 1;
+                position: relative;
+                background: $ADFC-lightGrey;
                 margin: 2px;
                 padding: 7px 0;
                 text-align: center;
@@ -203,6 +206,34 @@ div#react {
                 }
             }
 
+            .tab-buttons {
+                font-size: 18px;
+                color: #FFFFFF;
+                display: $welcomePageTabButtonsDisplay;
+                flex-grow: 0;
+                flex-direction: row;
+                min-height: 54px;
+                width: 100%;
+                background: $ADFC-grey;
+
+                .tab {
+                    display: $welcomePageTabDisplay;
+                    text-align: center;
+                    background: rgba(9,30,66,0.37);
+                    height: 55px;
+                    line-height: 54px;
+                    flex-grow: 1;
+                    cursor: pointer;
+
+                    &.selected, &:hover {
+                        background: rgba(9,30,66,0.71);
+                    }
+
+                    &:last-child {
+                        margin-left: 1px;
+                    }
+                }
+            }
         }
     }
 
