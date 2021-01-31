@@ -12,14 +12,14 @@
 
  .premeeting-screen {
     align-items: stretch;
-    background: radial-gradient(50% 50% at 50% 50%, #2A3A4B 20.83%, #1E2A36 100%);
+    background: radial-gradient(50% 50% at 50% 50%,darken( $ADFC-darkGrey, 20% ) 20.83%, lighten( $ADFC-darkGrey, 20% ) 100%);
     display: flex;
     flex-direction: column;
     font-size: 1.3em;
     z-index: $toolbarZ + 1;
 
     &-avatar {
-        background-color: #A4B8D1;
+        background-color: $ADFC-grey;
         margin-bottom: 24px;
 
         text {
@@ -43,13 +43,15 @@
         width: 286px;
 
         &.primary {
-            background: #0376DA;
-            border: 1px solid #0376DA;
+            background: $buttonBackground;
+            color: white;
+            border: 1px solid darken( $buttonBackground, 10% );
         }
 
         &.secondary {
-            background: transparent;
-            border: 1px solid #5E6D7A;
+            background: $ADFC-orange;
+            color: white;
+            border: 1px solid darken( $ADFC-orange, 20%);
         }
 
         &.text {
@@ -104,6 +106,7 @@
         flex: 1;
         flex-direction: column;
         justify-content: flex-end;
+        padding-bottom: 24px;
         z-index: $toolbarZ + 2;
 
         .title {
@@ -126,14 +129,14 @@
             margin-bottom: 16px;
 
             .url {
-                background: rgba(28, 32, 37, 0.5);
+                background: $ADFC-blue;
                 border-radius: 4px;
                 display: flex;
                 padding: 8px 10px;
                 transition: background 0.16s ease-out;
 
                 &:hover {
-                    background: #1C2025;
+                    background: lighten( $ADFC-blue, 20% );
                 }
 
                 &.done {
